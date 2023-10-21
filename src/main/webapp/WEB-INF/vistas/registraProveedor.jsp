@@ -117,6 +117,16 @@ $('#id_form').bootstrapValidator({
                 	min : 5,
                 	max : 100
                 },
+                remote :{
+                	delay   : 1000,
+                	url     : 'buscaProveedorNombre',
+                	message : 'El nombre ya existe',
+                	data: {
+    		                nombres: function() {
+    		                    return $('#id_nombre').val();
+    		                },
+    		        },
+                }
             }
         },
         dni: {
@@ -124,9 +134,28 @@ $('#id_form').bootstrapValidator({
             validators: {
                 notEmpty: {
                     message: 'DNI es un campo obligatorio'
+                }stringLength :{
+                	message:'El nombre es de 5 a 100 caracteres',
+                	min : 5,
+                	max : 100
                 },
+                remote :{
+                	delay   : 1000,
+                	url     : 'ValidarDni',
+                	message : 'El dni ya existe',
+                	data: {
+		                nombres: function() {
+		                    return $('#id_act_nombre').val();
+		                },
+		                id: function() {
+		                    return $('#id_ID').val();
+		                },
+		        	},
+                }
             }
-        },
+        },        
+        
+        
         tipo: {
     		selector : '#id_tipo',
             validators: {
