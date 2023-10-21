@@ -141,6 +141,7 @@ $('#id_form').bootstrapValidator({
                 },
                 remote :{
                 	delay   : 1000,
+<<<<<<< HEAD
                 	url     : 'ValidarDni',
                 	message : 'El dni ya existe',
                 	data: {
@@ -151,6 +152,15 @@ $('#id_form').bootstrapValidator({
 		                    return $('#id_ID').val();
 		                },
 		        	},
+=======
+                	url     : 'buscaProveedorDNI',
+                	message : 'El DNI ya existe',
+                	data: {
+    		                nombres: function() {
+    		                    return $('#id_nombre').val();
+    		                },
+    		        },
+>>>>>>> branch 'master' of https://github.com/jorgejacinto9701/Spring-JAVA17-Semana07-Finalizado.git
                 }
             }
         },        

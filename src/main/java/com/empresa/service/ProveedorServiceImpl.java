@@ -21,12 +21,14 @@ public class ProveedorServiceImpl implements ProveedorService{
 
 	@Override
 	public List<Proveedor> listaPorNombreIgual(String nombre) {
+
 		return repository.listaPorNombreIgualRegistra(nombre);
 	}
 
 	@Override
 	public List<Proveedor> listaPorDniIgual(String dni) {
 		return repository.listaPorDniIgualRegistra(dni);
+
 	}
 
 }
